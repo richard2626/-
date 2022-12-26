@@ -1,0 +1,13 @@
+The matrix:
+1 2 
+3 4 
+5 6 
+sum all: 21
+
+sum of row 0: 3
+sum of row 1: 7
+sum of row 2: 11
+
+sum of column 0: 9
+sum of column 1: 12
+
