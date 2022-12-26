@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <stdio.h>
 
 // g++ -c main.cpp -I /opt/homebrew/Cellar/sfml/2.5.1_2/include
 // g++ main.o -o sfml-app -L /opt/homebrew/Cellar/sfml/2.5.1_2/lib -lsfml-graphics -lsfml-window -lsfml-system
