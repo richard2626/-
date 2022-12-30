@@ -55,6 +55,67 @@ void inputMat(int **ans, int r, int c)
         }
     }
 }
-int **multiplyMat(int **Mat1, int **Mat2, int M, int N, int K);
-int **toeplitzMat(int **Mat, int M, int N);
-void printMat(int **, int, int);
+int **multiplyMat(int **Mat1, int **Mat2, int M, int N, int K)
+{
+    int **ans = new int *[M];
+    for (int i = 0; i < M; i++)
+    {
+        ans[i] = new int[K];
+    }
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 0; j < K; j++)
+        {
+            ans[i][j] = 0;
+        }
+    }
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 0; j < K; j++)
+        {
+            for (int k = 0; k < N; k++)
+            {
+                ans[i][j] += Mat1[i][k] * Mat2[k][j];
+            }
+        }
+    }
+    return ans;
+}
+int **toeplitzMat(int **Mat, int M, int N)
+{
+    int **ans = new int *[M];
+    for (int i = 0; i < M; i++)
+    {
+        ans[i] = new int[N];
+    }
+    for (int i = 0; i < M; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            if (i - j < 0)
+            {
+                ans[i][j] = Mat[0][j - i];
+            }
+            else if (i - j > 0)
+            {
+                ans[i][j] = Mat[i - j][0];
+            }
+            else
+            {
+                ans[i][j] = Mat[0][0];
+            }
+        }
+    }
+    return ans;
+}
+void printMat(int **Mat, int r, int c)
+{
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < c; j++)
+        {
+            printf("%4d", Mat[i][j]);
+        }
+        printf("\n");
+    }
+}
