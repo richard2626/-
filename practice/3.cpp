@@ -72,14 +72,14 @@ int binsearch(int *data, int N, int target, int &c)
     int high = N;
     int low = 0;
     int mid;
-    while (high != low)
+    while (high >= low)
     {
         mid = (high + low) / 2;
         if (data[mid] == target)
         {
             return 1;
         }
-        if (data[mid] > target)
+        if (data[mid] > target) // 1+5/2=3 3+6/2 = 4
         {
 
             high = mid - 1;
@@ -88,21 +88,25 @@ int binsearch(int *data, int N, int target, int &c)
         {
             low = mid + 1;
         }
+        c++;
     }
     return 0;
 }
 void sort(int *data, int N)
 {
+    int s;
     for (int i = 0; i < N; i++)
     {
-        for (int j = 1; j < N; j++)
+        s = i;
+        for (int j = i + 1; j < N; j++)
         {
-            if (data[i] < data[j])
+            if (data[j] < data[s])
             {
-                int temp = data[i];
-                data[i] = data[j];
-                data[j] = temp;
+                s = j;
             }
         }
+        int temp = data[i];
+        data[i] = data[s];
+        data[s] = temp;
     }
 }
