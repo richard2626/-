@@ -19,7 +19,6 @@ int main()
 void cal(int a, int b, int c, int d, char op)
 {
 	int no, de, g;
-
 	if (op == '+' || op == '/' || op == '*' || op == '-')
 	{
 		print(a / gcd(a, b), b / gcd(a, b));
@@ -31,28 +30,22 @@ void cal(int a, int b, int c, int d, char op)
 		case '+':
 			de = b * d;
 			no = a * d + b * c;
-			g = gcd(de, no);
-			print(no / g, de / g);
 			break;
 		case '-':
 			de = b * d;
 			no = a * d - b * c;
-			g = gcd(de, no);
-			print(no / g, de / g);
 			break;
 		case '/':
 			no = a * d;
 			de = b * c;
-			g = gcd(de, no);
-			print(no / g, de / g);
 			break;
 		case '*':
 			no = a * c;
 			de = b * d;
-			g = gcd(de, no);
-			print(no / g, de / g);
 			break;
 		}
+		g = gcd(de, no);
+		print(no / g, de / g);
 	}
 	else
 	{
