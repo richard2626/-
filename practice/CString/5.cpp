@@ -32,6 +32,6 @@ int main()
         printf("%s", s);
     }
 }
-char add(char a, char b, char c)
-{
-}
+// char add(char a, char b, char c)
+// {
+// }
