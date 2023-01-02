@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <cstring>
+#include <string.h>
 #include <iostream>
 
 char add(char, char, char);
