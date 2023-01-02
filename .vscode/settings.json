@@ -3,5 +3,9 @@
         "iostream": "cpp",
         "iosfwd": "cpp",
         "string": "cpp"
+    },
+    "files.exclude": {
+        "**/*.exe": true,
+        "**/*Icon?":true
     }
 }
