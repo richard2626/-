@@ -36,7 +36,6 @@ long long B2dec(long long n, int base)
 }
 bool isBaseB(long long n, int base)
 {
-
 	while (n)
 	{
 		if (n % 10 >= base)

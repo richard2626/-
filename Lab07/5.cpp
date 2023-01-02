@@ -18,6 +18,7 @@ int main()
 }
 void printMon(int m, int y)
 {
+    Head(m);
     int w = BeginDay(m, y);
     int n = day_in_m(m, y);
     for (int b = 0; b < w; b++)
@@ -43,7 +44,7 @@ void printCal(int q, int y)
 
     for (int m = q * 3 - 2; m <= q * 3; m++)
     {
-        Head(m);
+
         printMon(m, y);
         printf("\n");
         if (m % 3 != 0)

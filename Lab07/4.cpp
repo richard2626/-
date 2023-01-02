@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <ctype.h>
+// #include <ctype.h>
 
 int IsPrime(int);
 int main()
@@ -19,11 +19,9 @@ int main()
         }
         else
             printf("%d is not prime\n\n", n);
-
         printf("Input a number: ");
     }
 }
-
 int IsPrime(int a)
 {
     int fac = 2;
@@ -31,19 +29,15 @@ int IsPrime(int a)
     {
         return 1;
     }
-
-    bool prime = true;
     if (a == 2)
     {
         return 2;
     }
-
     for (int i = 2; i < a; i++)
     {
         if (a % i == 0)
         {
             fac++;
-            prime = false;
         }
     }
 
