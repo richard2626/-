@@ -2,36 +2,47 @@
 #include <string.h>
 #include <iostream>
 
-char add(char, char, char);
+char add(char, char, char *);
 int main()
 {
-    char s[100];
-    char f[100];
-    char l = '0';
-    char ans[100];
-    // scanf("%s", &s);
-    // scanf("%s", &f);
-    int max;
-    char temp[100];
-    if (strlen(s) > strlen(f))
+    char *s = new char[100];
+    char *f = new char[100];
+    scanf("%s", s);
+    scanf("%s", f);
+    char *a = new char[100]();
+    char *b = new char[100]();
+    for (int i = 0; i < 100; i++)
     {
-        max = strlen(s);
-        for (int i = 0; i < max - strlen(f); i++)
-            temp[i] = '0';
-        strcat(temp, f);
-        strcpy(f, temp);
-        printf("%s", f);
+        a[i] = '0';
+        b[i] = '0';
     }
-    else
+    int max = strlen(s) > strlen(f) ? strlen(s) : strlen(f);
+    for (int i = 0; i < strlen(s); i++)
     {
-        max = strlen(f);
-        for (int i = 0; i < max - strlen(s); i++)
-            temp[i] = '0';
-        strcat(temp, s);
-        strcpy(s, temp);
-        printf("%s", s);
+        a[i] = s[strlen(s) - i - 1];
     }
+    for (int i = 0; i < strlen(f); i++)
+    {
+        b[i] = f[strlen(f) - i - 1];
+    }
+    char *ans = new char[100]();
+    char c = '0';
+    for (int i = 0; i <= max; i++)
+    {
+        ans[i] = add(a[i], b[i], &c);
+    }
+    ans[strlen(ans)] = c == '0' ? '\0' : c;
+    for (int i = 0; i < strlen(ans); i++)
+    {
+        printf("%c", ans[strlen(ans) - i - 1]);
+    }
+    printf("\n");
 }
-// char add(char a, char b, char c)
-// {
-// }
+char add(char a, char b, char *c)
+{
+    char ans;
+    int out = int(a) - 48 + int(b) - 48 + int(*c) - 48;
+    ans = char(out % 10 + 48);
+    *c = char(out / 10 + 48);
+    return ans;
+}
