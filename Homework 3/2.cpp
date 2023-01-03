@@ -16,6 +16,6 @@ int main()
     for (int i = 1; i <= 6; i++, temp /= x * x)
         sum2 += (i % 2 ? (1) : (-1)) * temp;
 
-    printf("(a) %13d\n", sum);
+    printf("(a) %13d\n", (int)sum);
     printf("(b) %.12lf\n", sum2);
 }

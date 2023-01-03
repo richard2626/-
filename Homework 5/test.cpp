@@ -12,6 +12,6 @@ int main()
 void test()
 {
     char s[100];
-    scanf(" %c", &s);
+    scanf(" %c", &s[0]);
     printf("%s\n", s);
 }

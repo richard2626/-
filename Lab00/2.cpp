@@ -14,7 +14,7 @@ int main()
 	double bmi;
 
 	printf("Input ID (int): ");
-	scanf("%d\n", &id);
+	scanf("%lf\n", &id);
 
 	printf("Input first letter of last name (char): ");
 	scanf("%c\n", &laname);
@@ -41,7 +41,7 @@ int main()
 	bmi = weight / ((height / 100) * (height / 100));
 
 	printf("\n*********** NYCU ID Card ***********\n");
-	printf("* (\\_/)  * ID %d\n", id);
+	printf("* (\\_/)  * ID %lf\n", id);
 	printf("* ( O_O) * NAME\n");
 	printf("* />   > * %c.-%c. %c.\n", fir1, fir2, laname);
 	printf("**********\n");
