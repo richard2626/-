@@ -10,7 +10,7 @@ int main()
     while (scanf("%lf %d", &num, &n) != EOF)
     {
         printf("The result is %.*lf\n", n, Round(num, n));
-         printf("Please input a number and a rounded place:");
+        printf("Please input a number and a rounded place:");
     }
 }
 double Round(double num, int n)

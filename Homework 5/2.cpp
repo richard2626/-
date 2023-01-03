@@ -6,7 +6,7 @@ int main()
     int n, k, r;
     int t;
     printf("Input 3 numbers: ");
-    while (scanf(" %d %d %d", &a, &b, &c)!= EOF)
+    while (scanf(" %d %d %d", &a, &b, &c) != EOF)
     {
         if (a < b)
         {
@@ -26,7 +26,7 @@ int main()
             b = c;
             c = t;
         }
-       
+
         // a = n > k ? (r > n ? r : n) : (r < n ? k : r);
         // b = n > k ? (r > n ? n : (r > k ? r : k)) : (r > k ? k : (r < n ? n : r));
         // c = n < k ? (r < n ? r : n) : (r > n ? k : r);

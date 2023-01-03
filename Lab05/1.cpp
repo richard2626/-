@@ -2,23 +2,26 @@
 
 int main()
 {
-	int a,b,r;
-	a=1;
+	int a, b, r;
+	a = 1;
 	printf("Input: ");
-	scanf(" %d",&b);
+	scanf(" %d", &b);
 	r = b;
-	while(scanf(" %d",&a)){
-		while(a!=b){
-			while(a>b){
+	while (scanf(" %d", &a))
+	{
+		while (a != b)
+		{
+			while (a > b)
+			{
 				a -= b;
 			}
-			while(b>a){
-			
+			while (b > a)
+			{
+
 				b -= a;
 			}
-		}	
-		r =a;
+		}
+		r = a;
 	}
-	printf("GCD = %d\n",r);
-	
+	printf("GCD = %d\n", r);
 }

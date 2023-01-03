@@ -16,8 +16,8 @@ int main()
     srand(12345);
     for (int i = 0; i < 100; i++)
     {
-        //toss = double(rand()) / (RAND_MAX + 1.0) * 6;
-        toss = rand()%6;
+        // toss = double(rand()) / (RAND_MAX + 1.0) * 6;
+        toss = rand() % 6;
         *(p + toss) += 1;
     }
     for (int i = 0; i < 6; i++)

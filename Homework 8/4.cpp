@@ -22,7 +22,7 @@ int main()
 }
 bool ATM(int dollars, int *n50, int *n20, int *n10)
 {
-    if (dollars % 10 != 0||dollars<0)
+    if (dollars % 10 != 0 || dollars < 0)
     {
         return 0;
     }

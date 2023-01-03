@@ -7,7 +7,7 @@ int main()
 	long long a, b;
 	bool prime = true;
 	bool prime2 = true;
-	while (scanf("%lld", &m) != EOF) //有遍//好看欸
+	while (scanf("%lld", &m) != EOF) // 有遍//好看欸
 	{
 		a = 0;
 		b = 0;

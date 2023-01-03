@@ -21,7 +21,7 @@ int main()
                 {
                     num = 4 * (100 * t + 10 * o + o);
                     ans = g * 1000 + 100 * o + 10 * o + d;
-                    if (num == ans&&t!=g&&t!=o&&t!=d&&g!=o&&g!=d&&o!=d)
+                    if (num == ans && t != g && t != o && t != d && g != o && g != d && o != d)
                     {
                         printf("T=%d, O=%d, G=%d, D=%d\n", t, o, g, d);
                     }

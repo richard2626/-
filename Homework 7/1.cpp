@@ -6,7 +6,7 @@ int main()
 {
     int n;
     printf("Input a number: ");
-    while (scanf("%d", &n)!=EOF)
+    while (scanf("%d", &n) != EOF)
     {
         if (IsPrime(n))
         {
@@ -22,9 +22,10 @@ int main()
 
 bool IsPrime(int a)
 {
-	if(a==1){
-		return 0;
-	}
+    if (a == 1)
+    {
+        return 0;
+    }
     bool prime = true;
     for (int i = 2; i * i <= a; i++)
     {

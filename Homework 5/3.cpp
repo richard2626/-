@@ -5,7 +5,7 @@ int main()
     int input;
     int ans;
     printf("Please input binary number: ");
-    while (scanf(" %d", &input)!=EOF)
+    while (scanf(" %d", &input) != EOF)
     {
         ans = 0;
         int mul = 1;

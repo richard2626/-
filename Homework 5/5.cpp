@@ -4,7 +4,7 @@ int main()
 {
     int x, y;
     printf("Input coordinate x, y: ");
-    while (scanf("%d %d", &x, &y)!= EOF)
+    while (scanf("%d %d", &x, &y) != EOF)
     {
         if (x == 0 || y == 0)
         {

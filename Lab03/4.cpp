@@ -14,7 +14,7 @@ int main()
         ans2 += (double)1. / i;
 
     double temp = 1;
-    for (int i = 1; i <= 2 * n; i++) //注意分母是0
+    for (int i = 1; i <= 2 * n; i++) // 注意分母是0
     {
 
         temp *= i;

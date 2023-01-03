@@ -30,10 +30,10 @@ int main()
 
     printf("Sum=%.6f\n", sum);
     printf("Average=%.6f\n\n", sum / 5);
-    
+
     sum = 0;
-    
-	printf("Case II:\n");
+
+    printf("Case II:\n");
     printf("Please enter five real numbers: ");
     scanf("%f", &input);
 

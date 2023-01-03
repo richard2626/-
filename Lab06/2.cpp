@@ -55,7 +55,7 @@ int main()
 		sum += (long double)d / n * log((long double)d / n / (1.0 / 6));
 		sum += (long double)e / n * log((long double)e / n / (1.0 / 6));
 		sum += (long double)f / n * log((long double)f / n / (1.0 / 6));
-		printf("D_KL(a || theory) = %.10llf\n", sum);
+		printf("D_KL(a || theory) = %.10lf\n", sum);
 
 		sum = 0;
 		double a = 0;
@@ -97,7 +97,7 @@ int main()
 		sum += f / n * log(f / n * 6);
 		// sum = a*log(a/(1/6.))+b*log(b/(1/6.))+c*log(c/(1/6.))+d*log(d/(1/6.))+e*log(e/(1/6.))+f*log(f/(1/6.));
 
-		printf("D_KL(b || theory) = %.10llf\n", sum);
+		printf("D_KL(b || theory) = %.10lf\n", sum);
 		printf("seed n: ");
 	}
 }

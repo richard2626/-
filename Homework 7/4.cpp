@@ -11,7 +11,7 @@ int main()
     printf("Please input the year: ");
     while (scanf("%d", &year) != EOF)
     {
-    	printf("\n");
+        printf("\n");
         printCal(year);
         printf("============================\n\n");
         printf("Please input the year: ");
@@ -40,11 +40,12 @@ void printCal(int y)
             }
             else
             {
-            	if(date==n&&m!=12){
-            		printf("\n");
-				}
-				else
-                 printf(" ");
+                if (date == n && m != 12)
+                {
+                    printf("\n");
+                }
+                else
+                    printf(" ");
                 w++;
             }
         }
