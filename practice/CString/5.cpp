@@ -11,7 +11,7 @@ int main()
     scanf("%s", f);
     char *a = new char[100]();
     char *b = new char[100]();
-    for (int i = 0; i < 100; i++)
+    for (int i = strlen(s); i < 100; i++)
     {
         a[i] = '0';
         b[i] = '0';
@@ -31,7 +31,10 @@ int main()
     {
         ans[i] = add(a[i], b[i], &c);
     }
-    ans[strlen(ans)] = c == '0' ? '\0' : c;
+    if (ans[strlen(ans) - 1] == '0')
+    {
+        ans[strlen(ans) - 1] = '\0';
+    }
     for (int i = 0; i < strlen(ans); i++)
     {
         printf("%c", ans[strlen(ans) - i - 1]);
